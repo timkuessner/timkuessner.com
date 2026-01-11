@@ -14,7 +14,14 @@ const pool = new Pool({
 });
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://timkuessner-com.vercel.app',
+    'https://timkuessner.com',
+    'https://www.timkuessner.com'
+  ]
+}));
 app.use(express.json());
 
 // Test route
