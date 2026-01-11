@@ -1,35 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import { testBackend, testDatabase } from './api/api';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [backendStatus, setBackendStatus] = useState<string>('');
+  const [dbStatus, setDbStatus] = useState<string>('');
+  const [loading, setLoading] = useState(false);
+
+  const handleTestBackend = async () => {
+    setLoading(true);
+    try {
+      const data = await testBackend();
+      setBackendStatus(`✅ ${data.message}`);
+    } catch (error) {
+      setBackendStatus('❌ Backend connection failed');
+    }
+    setLoading(false);
+  };
+
+  const handleTestDatabase = async () => {
+    setLoading(true);
+    try {
+      const data = await testDatabase();
+      setDbStatus(`✅ ${data.message}`);
+    } catch (error) {
+      setDbStatus('❌ Database connection failed');
+    }
+    setLoading(false);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className="App">
+      <h1>My Portfolio</h1>
+      <p>Testing connections</p>
+      
+      <div style={{ marginTop: '2rem' }}>
+        <button onClick={handleTestBackend} disabled={loading}>
+          Test Backend
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        {backendStatus && <p>{backendStatus}</p>}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+      <div style={{ marginTop: '1rem' }}>
+        <button onClick={handleTestDatabase} disabled={loading}>
+          Test Database
+        </button>
+        {dbStatus && <p>{dbStatus}</p>}
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
