@@ -53,7 +53,7 @@ export default function App() {
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-4 relative">
         <h1
-          className="font-bold mb-12 text-center leading-tight"
+          className="font-bold text-center leading-tight"
           style={{ maxWidth: '70vw' }}
         >
           {/* Desktop */}
@@ -83,6 +83,15 @@ export default function App() {
           </span>
         </h1>
 
+        <p className="hidden md:flex items-center justify-center gap-1 text-white mt-4 font-light">
+          <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+          </svg>
+          Switzerland | Fullstack Developer | Hardware
+          <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+          </svg>
+        </p>
 
         {/* Marquee */}
         <div className="relative w-full overflow-hidden py-4">
