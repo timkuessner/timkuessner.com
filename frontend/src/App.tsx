@@ -15,6 +15,8 @@ const skills = [
   "Supabase",
   "SQL",
   "Python",
+  "Arduino",
+  "ESP32-S3"
 ];
 
 const repeatedSkills = [...skills, ...skills];
