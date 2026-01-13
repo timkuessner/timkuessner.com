@@ -3,6 +3,15 @@ import { SKILLS } from '../../constants/skills';
 export default function Hero() {
   const repeatedSkills = [...SKILLS, ...SKILLS];
 
+  
+  function scrollDown() {
+    const windowHeight = window.innerHeight;
+    window.scrollBy({
+        top: windowHeight,
+        behavior: 'smooth'
+    });
+  }
+
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-4 relative">
       <h1
@@ -73,6 +82,7 @@ export default function Hero() {
           strokeWidth={2}
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
+          onClick={scrollDown}
         >
           <path
             strokeLinecap="round"
