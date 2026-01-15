@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Education() {
   const educationItems = [
     {
@@ -34,12 +36,13 @@ export default function Education() {
     <section className="min-h-screen flex flex-col items-center justify-center bg-black px-4 py-32">
       <div className="max-w-5xl w-full">
         <h2 className="text-5xl md:text-6xl font-semibold mb-16 text-center text-white">Education</h2>
-        
+
         <div className="space-y-4">
           {educationItems.map((item) => (
-            <div
+            <Link
+              to={`/edu/${item.id}`}
               key={item.id}
-              className="p-8 rounded-2xl border-2 border-neutral-800 hover:bg-neutral-800 hover:text-white transition-all duration-300 cursor-pointer group hover:-translate-y-1"
+              className="block p-8 rounded-2xl border-2 border-neutral-800 hover:bg-neutral-800 hover:text-white transition-all duration-300 cursor-pointer group hover:-translate-y-1"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                 <div>
@@ -50,16 +53,16 @@ export default function Education() {
                 </div>
                 <span className="mt-2 md:mt-0">{item.period}</span>
               </div>
-              
+
               <p className="leading-relaxed">{item.description}</p>
-              
+
               <div className="mt-6 flex items-center transition-colors">
                 <span className="text-sm">View details</span>
                 <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
