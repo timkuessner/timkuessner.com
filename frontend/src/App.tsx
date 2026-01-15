@@ -4,6 +4,9 @@ import Naycol from './pages/edu/Naycol';
 import Gymoberwil from './pages/edu/Gymoberwil';
 import Sektherwil from './pages/edu/Sektherwil';
 import Primtherwil from './pages/edu/Primtherwil';
+import Chess from './pages/proj/Chess';
+import TicTacToe from './pages/proj/TicTacToe';
+import Other from './pages/proj/Other';
 
 export default function App() {
   return (
@@ -15,6 +18,9 @@ export default function App() {
           <Route path="/edu/gymoberwil" element={<Gymoberwil />} />
           <Route path="/edu/sektherwil" element={<Sektherwil />} />
           <Route path="/edu/primtherwil" element={<Primtherwil />} />
+          <Route path="/proj/chess" element={<Chess />} />
+          <Route path="/proj/tictactoe" element={<TicTacToe />} />
+          <Route path="/proj/other" element={<Other />} />
           {/* Future routes will go here */}
         </Routes>
       </div>
