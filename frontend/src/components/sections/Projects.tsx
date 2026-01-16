@@ -4,17 +4,10 @@ import Card from '../common/Card';
 export default function Projects() {
     const projects = [
         {
-            id: 'chess',
-            title: 'Chess',
-            date: '2026',
-            description: 'A chess game with AI integration.',
-            link: '/proj/chess'
-        },
-        {
             id: 'tictactoe',
             title: 'Tic Tac Toe',
             date: '2026',
-            description: 'The classic game with unbeatable AI mode.',
+            description: 'Tic Tac Toe with unbeatable AI mode.',
             link: '/proj/tictactoe'
         },
     ];

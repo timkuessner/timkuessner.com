@@ -8,7 +8,7 @@ export default function Education() {
       institution: 'Nayland College',
       tags: ['Nelson, New Zealand'],
       period: 'July 2024 - December 2025',
-      description: 'Completed studies at Nayland College in Nelson, New Zealand as an exchange student. Finished NCEA coursework and secondary school and am currently awaiting my final results.',
+      description: 'Passed NCEA Level 3 with Excellence endorsement.',
     },
     {
       id: 'gymoberwil',

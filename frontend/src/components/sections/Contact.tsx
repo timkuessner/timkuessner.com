@@ -4,7 +4,7 @@ export default function Contact() {
       <div className="max-w-4xl w-full">
         <h2 className="text-5xl md:text-6xl font-semibold mb-8 text-center text-white">Contact Me</h2>
         <p className="text-white text-center mb-16 text-lg">
-          Have a project in mind? Let's work together!
+          Say hi : )
         </p>
 
         <div className="flex flex-col items-center space-y-4">
