@@ -13,8 +13,8 @@ export default function Certificates() {
     },
     {
       id: 'naycol',
-      title: 'Nayland college certificates',
-      issuer: 'nayland college',
+      title: 'Nayland College Certificates',
+      issuer: 'Nayland College',
       date: '2025',
       description: '#1 Computer Science, #1 Periodic Table Competition, International Committee, Final Report',
       link: '/cert/naycol'
@@ -32,7 +32,8 @@ export default function Certificates() {
             subtitle={cert.issuer}
             date={cert.date}
             description={cert.description}
-            href={cert.link}
+            href={cert.link.startsWith('/') ? undefined : cert.link}
+            to={cert.link.startsWith('/') ? cert.link : undefined}
             linkText="View certificate"
           />
         ))}
