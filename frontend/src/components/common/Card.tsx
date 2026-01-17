@@ -42,7 +42,11 @@ export default function Card({ title, subtitle, date, description, tags, to, hre
 
     if (to) {
         return (
-            <Link to={to} className={className}>
+            <Link
+                to={to}
+                className={className}
+                onClick={() => window.scrollTo(0, 0)}
+            >
                 {content}
             </Link>
         );
