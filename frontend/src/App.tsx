@@ -8,6 +8,8 @@ import Chess from './pages/proj/Chess';
 import TicTacToe from './pages/proj/TicTacToe';
 import Other from './pages/proj/Other';
 
+import NaycolCert from './pages/cert/NaycolCert';
+
 export default function App() {
   return (
     <Router>
@@ -18,6 +20,7 @@ export default function App() {
           <Route path="/edu/gymoberwil" element={<Gymoberwil />} />
           <Route path="/edu/sektherwil" element={<Sektherwil />} />
           <Route path="/edu/primtherwil" element={<Primtherwil />} />
+          <Route path="/cert/naycol" element={<NaycolCert />} />
           <Route path="/proj/chess" element={<Chess />} />
           <Route path="/proj/tictactoe" element={<TicTacToe />} />
           <Route path="/proj/other" element={<Other />} />

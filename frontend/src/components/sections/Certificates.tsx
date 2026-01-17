@@ -4,12 +4,20 @@ import Card from '../common/Card';
 export default function Certificates() {
   const certificates = [
     {
-      id: 'cert-1',
+      id: 'cs50-ai',
       title: 'CS50’s Introduction to Artificial Intelligence with Python',
       issuer: 'Harvard’s CS50',
       date: '2026',
       description: 'Foundation of modern artificial intelligence',
       link: 'https://cs50.harvard.edu/certificates/8d382dfb-4d91-4b2b-a30d-c01fd780c5fa'
+    },
+    {
+      id: 'naycol',
+      title: 'Nayland college certificates',
+      issuer: 'nayland college',
+      date: '2025',
+      description: '#1 Computer Science, #1 Periodic Table Competition, International Committee, Final Report',
+      link: '/cert/naycol'
     },
     // Add more certificates here
   ];
