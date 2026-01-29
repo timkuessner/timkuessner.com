@@ -10,6 +10,13 @@ export default function Projects() {
             description: 'Tic Tac Toe with unbeatable AI mode.',
             link: '/proj/tictactoe'
         },
+        {
+            id: 'rust-chess',
+            title: 'Chess',
+            status: 'In Progress',
+            description: 'Chess engine built in Rust.',
+            link: 'https://github.com/timkuessner/rust-chess'
+        },
     ];
 
     return (
