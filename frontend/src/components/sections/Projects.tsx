@@ -13,7 +13,7 @@ export default function Projects() {
         {
             id: 'rust-chess',
             title: 'Chess',
-            status: 'In Progress',
+            date: 'In Progress',
             description: 'Chess engine built in Rust.',
             link: 'https://github.com/timkuessner/rust-chess'
         },
